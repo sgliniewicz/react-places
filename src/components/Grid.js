@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from '../card';
+import Card from './Card';
 
 class CardGrid extends Component {
 
@@ -16,7 +16,6 @@ class CardGrid extends Component {
         //fetch Google info on mount
         const url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=AIzaSyCOXDkFOBE-H2kq2tzmJDauijmak-iFdRU'       
         this.fetchPlaces(url);
-   
     }
 
     render() {
