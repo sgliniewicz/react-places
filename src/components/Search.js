@@ -11,6 +11,7 @@ class SearchBox extends Component {
             </div>
         );
     }
+
 }
 
 export default SearchBox;
