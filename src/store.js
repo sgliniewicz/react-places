@@ -1,17 +1,16 @@
 import { createStore, combineReducers } from 'redux';
-import reducers from './reducers';
+import reactPlacesApp from './reducers';
 //import createHistory from 'history/createBrowserHistory'
 
 //export const history = createHistory();
 
 //REDUX
 const initialState = {
-    appName: 'React Places',
-    places: null
+    placeName:"",
+    places: []
 };
 
-const store = createStore(
-    reducers
-);
+
+const store = createStore(initialState,reactPlacesApp);
 
 export default store;

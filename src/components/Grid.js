@@ -5,6 +5,7 @@ import Card from './Card';
 class CardGrid extends Component {
 
     constructor(props) {
+        //pass props back to parents
         super(props); 
         //initial State
         this.state = {
@@ -21,11 +22,7 @@ class CardGrid extends Component {
             this.setState({
                 places: data.results
             })
-            console.log(this.state.places);
 
-            this.state.places.map((place) => {
-                return console.log(place.name);
-            })
         });
     }
 
@@ -40,13 +37,12 @@ class CardGrid extends Component {
         return (
             <div>
                 <h1>GRID!</h1>
-                
-                
+                 
                 <ul>
                     {this.state.places.map((place, index) => (
                         // Only do this if items have no stable IDs
                         <li key={index}>
-                            <Card placeName={place.name}/>
+                            <Card place={place}/>
                         </li>
                     ))}
                 </ul>

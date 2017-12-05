@@ -1,6 +1,16 @@
 import { combineReducers } from 'redux'
-import reducer from './placeReducer'
 
-const reducers = combineReducers({reducer})
+const reducer = (state = [], action) => {
+    switch(action.type) {
+      case 'SEARCH_PLACES':
+        console.log("I'VE Reached This Reducer")
+        return null;
+    }
+  
+    return state;
+  
+};
 
-export default reducers;
+const reactPlacesApp = combineReducers({reducer})
+
+export default reactPlacesApp;
